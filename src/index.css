@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+  .text-shadow{
+    text-shadow: 2px 2px 2px black;
+  }
+
+  .img-shadow{
+    filter: drop-shadow(40px 50px 25px #300000eb);
+  }
+
+  .img-shadow2 {
+    filter: drop-shadow(10px 30px 15px #3030307a);
+  }
+  /* .primary-btn {
+    @apply bg-primary w-full text-white px-4 py-2 rounded-md hover:bg-secondary duration-300;
+  } */
+  .large-text {
+      @apply text-center text-[80px] sm:text-[120px] md:text-[150px] xl:text-[150px] text-white uppercase font-bold absolute w-full z-0 text-shadow;
+      bottom: -30px;
+  
+}
+
+}
+
+/* styles.css or your main CSS file */
+/* .primary-btn {
+  background-color: #48bb78; 
+  color: #fff; 
+  font-weight: bold;
+  padding: 0.5rem 1rem; 
+  border-radius: 0.375rem; 
+  transition: background-color 0.3s;
+} */
+
+/* .primary-btn:hover {
+  background-color: #2f855a; 
+} */
+
+.btn {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #40B3A2;
+  min-width: 200px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: .95;
+}
+
+.btn .animation {
+  border-radius: 100%;
+  animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
+
+@media (min-width: 767px) {
+	.ezy__clients14-list [class*="col-"] {
+		border-bottom: 1px solid #e8e8e8;
+		border-left: 1px solid #e8e8e8;
+	}
+
+	.ezy__clients14-list [class*="col-"]:nth-child(4n + 1) {
+		border-left-color: transparent;
+	}
+
+	.ezy__clients14-list [class*="col-"]:nth-last-child(-n + 4) {
+		border-bottom-color: transparent;
+	}
+}
+
+.mybtn {
+  background: transparent;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: 10px 55px;
+  cursor: pointer;
+  perspective: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+  position: relative; /* Add this to ensure the pseudo-element positions correctly */
+  overflow: hidden;   /* Add this to ensure the pseudo-element doesn't overflow */
+}
+
+.mybtn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    320deg,
+    rgba(11, 23, 39, 0.678),
+    rgba(11, 23, 39, 0.308)
+  );
+  z-index: 1;
+  transition: background 3s;
+}
+
+.mybtn:hover::before {
+  animation: rotate 1s;
+  transition: all 0.5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
